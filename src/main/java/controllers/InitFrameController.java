@@ -13,10 +13,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import models.CardOffsets;
+import models.ConvertValues;
 import models.TypeIncrement;
 import utilities.Filters;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -86,6 +88,8 @@ public class InitFrameController implements Initializable {
 
     private TypeIncrement typeIncrement;
 
+    private File slus014;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //Se ejecuta después de que el archivo FXML ha sido cargado
@@ -99,6 +103,8 @@ public class InitFrameController implements Initializable {
         rdIncrease.setToggleGroup(radioGroup);
         rdDecrease.setToggleGroup(radioGroup);
 
+        // Initializes slus014 file
+        slus014 = null;
     }
 
     @FXML
@@ -108,6 +114,40 @@ public class InitFrameController implements Initializable {
 
     @FXML
     void clickEdit(ActionEvent event) {
+        // Guard clauses
+        if(slus014 == null) {
+            System.out.println("SLUS_014.11 file must be opened before editing...");
+            return;
+        }
+
+        if(!rdIncrease.isSelected() && !rdDecrease.isSelected()) {
+            System.out.println("Do you want to increase or decrease?");
+            return;
+        }
+
+        if(cbId.getValue() == null || cbType.getValue() == null) {
+            System.out.println("You must select a card and a type!");
+            return;
+        }
+
+        if(txtValue.getText().isBlank()) {
+            System.out.println("The value field cannot be empty!");
+            return;
+        }
+
+        // Get the value to write
+        String textValue = txtValue.getText();
+        byte valueToWrite;
+
+        try {
+            valueToWrite = (rdIncrease.isSelected())
+                    ? ConvertValues.convertIncrease(textValue)
+                    : ConvertValues.convertDecrease(textValue);
+
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return;
+        }
 
     }
 

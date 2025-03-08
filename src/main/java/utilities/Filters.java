@@ -18,7 +18,7 @@ public class Filters {
 
         int newTextNumber = Integer.parseInt(newText);
 
-        if (newTextNumber >= 1 && newTextNumber <=1270) {
+        if (newTextNumber >= 10 && newTextNumber <=1270) {
             return change;
         }
 
@@ -39,7 +39,7 @@ public class Filters {
 
             int newTextNumber = Integer.parseInt(newText);
 
-            if (newTextNumber >= 1 && newTextNumber <=1280) {
+            if (newTextNumber >= 10 && newTextNumber <=1280) {
                 return change;
             }
 
