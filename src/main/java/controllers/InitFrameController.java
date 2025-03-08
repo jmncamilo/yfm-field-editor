@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import models.CardOffsets;
@@ -20,6 +21,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class InitFrameController implements Initializable {
@@ -112,6 +114,30 @@ public class InitFrameController implements Initializable {
     @FXML
     void clickId(ActionEvent event) {
         System.out.println("Offset: " + cardBase.getCardBaseOffset().get(cbId.getValue())); // TESTING
+        // Change the background image
+        String currentSelection = cbId.getValue();
+        switch (currentSelection) {
+            case "Forest":
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/forest.png"))));
+                break;
+            case "Wasteland":
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/wasteland.png"))));
+                break;
+            case "Mountain":
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/mountain.png"))));
+                break;
+            case "Sogen":
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/sogen.png"))));
+                break;
+            case "Umi":
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/umi.png"))));
+                break;
+            case "Yami":
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/yami.png"))));
+                break;
+            default:
+                imgBackground.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/normal.png"))));
+        }
     }
 
     @FXML
@@ -147,7 +173,7 @@ public class InitFrameController implements Initializable {
 
     @FXML
     void clickOpen(ActionEvent event) {
-        
+
     }
 
 }
