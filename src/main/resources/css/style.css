@@ -1,0 +1,145 @@
+/*------- ALL -------*/
+* {
+    -fx-font-family: Tahoma;
+    -fx-text-fill: #1e1e1e;
+}
+
+/*------- LABEL -------*/
+.label {
+    -fx-font-family: Tahoma;
+    -fx-font-weight: bold;
+    -fx-font-size: 19px;
+}
+
+#labelTitles {
+    -fx-font-size: 11px;
+}
+
+/*------- SEPARADOR -------*/
+.separator .line {
+    -fx-border-color: linear-gradient(to right, #c19a6b, #b8860b, #c19a6b); /* Degradado dorado-marrón */
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(159, 101, 63, 0.5), 1, 0.1, 0, 1); /* Sombra marrón para efecto de relieve */
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+/*------- BOTONES -------*/
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-color: #FAFBFC;
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(27, 31, 35, 0.15);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-insets: 0px;
+    -fx-background-insets: 0px;
+}
+
+.button:hover {
+    -fx-background-color: #F3F4F6;
+    -fx-cursor: hand; /* Cambia el cursor a "mano" */
+}
+
+.button:pressed {
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: linear-gradient(to bottom, #b8860b, #8b5a2b); /* Oscurece al presionar */
+    -fx-translate-y: 2px; /* Efecto de pulsación */
+}
+
+#btnSmallText {
+    -fx-text-fill: #424242;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+#btnSmallText:pressed {
+    -fx-translate-y: 1px;
+    -fx-text-fill: #f0f0f0;
+}
+
+/*------- RADIO BOTONES -------*/
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-border-insets: 0px;
+    -fx-background-insets: 0px;
+}
+
+.radio-button .radio {
+    -fx-pref-width: 19px; /* Mantiene el tamaño */
+    -fx-pref-height: 19px; /* Mantiene el tamaño */
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: transparent; /* Elimina el fondo azul */
+    -fx-border-color: linear-gradient(to bottom, #b8860b, #8b5a2b);
+    -fx-border-width: 2px; /* Grosor del borde */
+    -fx-border-radius: 50%; /* Asegura la forma circular */
+}
+
+.radio-button:focused .radio {
+    -fx-background-color: transparent; /* Elimina el fondo azul */
+    -fx-border-color: linear-gradient(to bottom, #b8860b, #8b5a2b);
+    -fx-border-width: 2px; /* Grosor del borde */
+    -fx-border-radius: 50%; /* Asegura la forma circular */
+}
+
+/*------- COMBO-BOX -------*/
+.combo-box {
+    -fx-font-family: Tahoma;
+    -fx-font-weight: normal;
+    -fx-font-size: 12px;
+    -fx-background-color: #FCFDFE;
+    -fx-background-radius: 7px;
+    -fx-background-insets: 0px;
+    -fx-padding: 0px;
+}
+
+.combo-box:focused {
+    -fx-border-width: 2px;
+    -fx-border-radius: 7px;
+    -fx-border-color: linear-gradient(to bottom, #b8860b, #8b5a2b);
+    -fx-border-insets: 0px;
+    -fx-insets: 0px;
+    -fx-padding: -2px;
+    -fx-effect: dropshadow(gaussian, rgb(196, 175, 127), 7, 0.2, 0, 0); /* Efecto de brillo dorado */
+}
+
+.combo-box .arrow {
+    -fx-background-color: linear-gradient(to bottom, #b8860b, #8b5a2b);
+}
+
+.combo-box .list-view {
+    -fx-background-radius: 7px;
+}
+
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: linear-gradient(to bottom, #b8860b, #8b5a2b);
+    -fx-text-fill: #f0f0f0;
+}
+
+.combo-box .list-cell:focused {
+    -fx-background-color: transparent;
+    /*-fx-text-fill: #1e1e1e;*/
+    -fx-font-weight: bold;
+}
+
+/*------- TEXT FIELD -------*/
+.text-field {
+    -fx-font-family: Tahoma;
+    -fx-font-size: 14px;
+    -fx-background-color: #FCFDFE;
+    -fx-highlight-fill: linear-gradient(to bottom, #b8860b, #8b5a2b);
+    -fx-highlight-text-fill: #f0f0f0;
+    -fx-background-radius: 7px;
+    -fx-background-insets: 0px 0px;
+}
+
+.text-field:focused {
+    -fx-border-width: 2px;
+    -fx-border-radius: 7px;
+    -fx-border-color: linear-gradient(to bottom, #b8860b, #8b5a2b);
+    -fx-border-insets: 0px -1px;
+    -fx-effect: dropshadow(gaussian, rgb(196, 175, 127), 7, 0.2, 0, 0); /* Efecto de brillo dorado */
+}
