@@ -12,8 +12,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import models.CardOffsets;
 import models.ConvertValues;
+import models.OpenSlus;
 import models.TypeIncrement;
 import utilities.Filters;
 
@@ -108,8 +110,14 @@ public class InitFrameController implements Initializable {
     }
 
     @FXML
-    void clickDelete(ActionEvent event) {
-
+    void clickOpen(ActionEvent event) {
+        slus014 = OpenSlus.fileChooser((Stage) btnOpen.getScene().getWindow());
+        if(slus014 != null){
+            btnOpen.setDisable(true);
+            System.out.println("File path: " + slus014); // TESTING
+        } else {
+            System.out.println("You must select the SLUS file...");
+        }
     }
 
     @FXML
@@ -149,6 +157,20 @@ public class InitFrameController implements Initializable {
             return;
         }
 
+    }
+
+    @FXML
+    void clickDelete(ActionEvent event) {
+        // Guard clauses
+        if(slus014 == null) {
+            System.out.println("SLUS_014.11 file must be opened before editing...");
+            return;
+        }
+
+        if(cbId.getValue() == null || cbType.getValue() == null) {
+            System.out.println("You must select a card and a type!");
+            return;
+        }
     }
 
     @FXML
@@ -209,11 +231,6 @@ public class InitFrameController implements Initializable {
                 e.printStackTrace();
             }
         }
-    }
-
-    @FXML
-    void clickOpen(ActionEvent event) {
-
     }
 
 }
