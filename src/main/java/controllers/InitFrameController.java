@@ -13,10 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import models.CardOffsets;
-import models.ConvertValues;
-import models.OpenSlus;
-import models.TypeIncrement;
+import models.*;
 import utilities.Filters;
 
 import java.awt.*;
@@ -157,6 +154,15 @@ public class InitFrameController implements Initializable {
             return;
         }
 
+        System.out.println("El valor byte es: " + valueToWrite); // TESTING
+        System.out.println("El valor hex es: " + String.format("0x%02X", valueToWrite)); // TESTING
+
+        // Get the current offset to write
+        long currentOffset = cardBase.getCardBaseOffset().get(cbId.getValue());
+
+        // Calling function to write SLUS file and DONE!
+        WritingSlus.write(valueToWrite, currentOffset, slus014);
+
     }
 
     @FXML
@@ -171,6 +177,8 @@ public class InitFrameController implements Initializable {
             System.out.println("You must select a card and a type!");
             return;
         }
+
+        // CONTINUAR...
     }
 
     @FXML
