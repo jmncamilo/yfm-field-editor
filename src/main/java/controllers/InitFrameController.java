@@ -178,7 +178,13 @@ public class InitFrameController implements Initializable {
             return;
         }
 
-        // CONTINUAR...
+        // Finding first value in the LinkedHashMap
+        long firstMapValue = cardBase.getCardBaseOffset().values().iterator().next();
+
+        // Writing and finding others offsets
+        for (long i = 0; i < 6; i++) {
+            WritingSlus.write((byte) 0, firstMapValue + i, slus014);
+        }
     }
 
     @FXML
