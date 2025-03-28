@@ -143,3 +143,21 @@
     -fx-border-insets: 0px -1px;
     -fx-effect: dropshadow(gaussian, rgb(196, 175, 127), 7, 0.2, 0, 0); /* Efecto de brillo dorado */
 }
+
+/*------- ALERTS -------*/
+.custom-alert {
+    -fx-font-family: "Tahoma";          /* Fuente Tahoma */
+    -fx-font-size: 16px;                /* Tamaño de fuente 13px */
+    -fx-font-weight: normal;              /* Texto en negrita */
+}
+
+.custom-alert .header-panel {
+    -fx-font-family: "Tahoma";          /* Fuente Tahoma */
+    -fx-font-size: 18px;                /* Tamaño de fuente 13px */
+    -fx-font-weight: bold;              /* Texto en negrita */
+}
+
+.custom-alert .label {
+    -fx-text-fill: #0f0f0f;
+    -fx-font-family: "Tahoma";          /* Fuente Tahoma */
+}
