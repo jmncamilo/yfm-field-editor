@@ -80,7 +80,7 @@ Developed by Camilo Jiménez a.k.a. Mystic. This project is the result of my ind
 
 ## 🙌🏻 Contact & Support
 
-Feel free to connect with me on LinkedIn or email me directly. My social media profiles are linked at the beginning of this GitHub profile.
+Feel free to connect with me on LinkedIn or email me directly.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-LinkedIn?style=social&logo=rocket&logoColor=%230a66c2&logoSize=20)](https://www.linkedin.com/in/camilojimenz)
 [![Email](https://img.shields.io/badge/Email%20me-brightgreen?style=social&logo=gmail&logoColor=%23EA4335&logoSize=auto
