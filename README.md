@@ -8,7 +8,7 @@ A tool to edit the values granted by Field Spells in Yu-Gi-Oh! Forbidden Memorie
 
 ## 📖 Introduction
 
-This tool allows you to modify the ATK/DFD values granted by Field Spells in the aforementioned PSX game. It is only compatible with the North American version [SLUS_014.11]. You can edit any Field Spell to increase or decrease monster ATK and DEF, giving you full control over how the field mechanics behave. Please note that there is a limit to the maximum ATK/DEF values you can assign due to the game's original memory constraints.
+This tool allows you to modify the power granted by Field Spells in the aforementioned PSX game. It is only compatible with the North American version [SLUS_014.11]. You can edit any Field Spell to increase or decrease monster ATK and DFD, giving you full control over how the field mechanics behave. Please note that there is a limit to the maximum ATK/DFD values you can assign due to the game's original memory constraints.
 
 ## ⚙️ Installation
 
