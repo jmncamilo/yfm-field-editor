@@ -43,6 +43,7 @@ public class Alerts {
         alert.showAndWait();
     }
 
+    // TODO: Move these alert methods to their appropriate usage locations in the application
     public static void alertErrorSlus() {
         formatAlert("Error", "File Not Opened", "SLUS_014.11 file must be opened before editing...", error);
     }
