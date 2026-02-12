@@ -128,11 +128,13 @@ public class InitFrameController implements Initializable {
         }
 
         if(!rdIncrease.isSelected() && !rdDecrease.isSelected()) {
-            System.out.println("Do you want to increase or decrease?");
+            Alerts.alertIncreaseOrDecrease();
+            System.out.println("Do you want to increase or decrease?"); // TESTING CJ
             return;
         }
 
         if(cbId.getValue() == null || cbType.getValue() == null) {
+            Alerts.alertType();
             System.out.println("You must select a card and a type!");
             return;
         }
@@ -164,7 +166,6 @@ public class InitFrameController implements Initializable {
 
         // Calling function to write SLUS file and DONE!
         WritingSlus.write(valueToWrite, currentOffset, slus014);
-
     }
 
     @FXML
@@ -177,6 +178,7 @@ public class InitFrameController implements Initializable {
         }
 
         if(cbId.getValue() == null || cbType.getValue() == null) {
+            Alerts.alertType();
             System.out.println("You must select a card and a type!");
             return;
         }

@@ -56,7 +56,7 @@ This tool is incredibly user-friendly. Follow these steps to modify your game:
 4. **Use the TYPE SELECTOR** to select the monster type (e.g., Dragon, Spellcaster, etc.) that will be affected by the card
 5. **Set the VALUE** to increase or decrease the ATK/DFD of the selected monster type
 6. **Save your changes** by clicking the **EDIT** button to apply and save your modifications in the `SLUS_014.11`
-7. **Reset values when needed** using the **CLEAR CURRENT ID VALUES** button to wipe all monster types associated with the selected card. This cleans the card, leaving it with no active effects
+7. **Reset values when needed** using the **CLEAR TYPE (ALL FIELDS)** button to wipe the selected monster type from all Field Spell cards simultaneously
 
 > _**Note**: this app is designed strictly for the original, unmodified game, as it relies on the default card names and internal logic. Given the variety of existing mods, using this tool on modified versions may cause incompatibilities._
 

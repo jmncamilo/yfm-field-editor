@@ -55,7 +55,7 @@
             <Font name="Tahoma" size="13.0" />
          </font>
       </Button>
-      <Button id="btnSmallText" fx:id="btnDelete" layoutX="400.0" layoutY="328.0" mnemonicParsing="false" onAction="#clickDelete" prefHeight="28.0" prefWidth="268.0" stylesheets="@../css/style.css" text="CLEAR CURRENT ID VALUES">
+      <Button id="btnSmallText" fx:id="btnDelete" layoutX="400.0" layoutY="328.0" mnemonicParsing="false" onAction="#clickDelete" prefHeight="28.0" prefWidth="268.0" stylesheets="@../css/style.css" text="CLEAR TYPE (ALL FIELDS)">
          <font>
             <Font name="Tahoma" size="13.0" />
          </font>
