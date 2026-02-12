@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import models.*;
+import utilities.Alerts;
 import utilities.Filters;
 
 import java.awt.*;
@@ -121,7 +122,8 @@ public class InitFrameController implements Initializable {
     void clickEdit(ActionEvent event) {
         // Guard clauses
         if(slus014 == null) {
-            System.out.println("SLUS_014.11 file must be opened before editing...");
+            Alerts.alertErrorSlus();
+            System.out.println("SLUS_014.11 file must be opened before editing..."); // TESTING CJ
             return;
         }
 
@@ -169,7 +171,8 @@ public class InitFrameController implements Initializable {
     void clickDelete(ActionEvent event) {
         // Guard clauses
         if(slus014 == null) {
-            System.out.println("SLUS_014.11 file must be opened before editing...");
+            Alerts.alertErrorSlus();
+            System.out.println("SLUS_014.11 file must be opened before editing..."); // TESTING CJ
             return;
         }
 
