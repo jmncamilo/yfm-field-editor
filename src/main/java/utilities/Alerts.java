@@ -43,7 +43,6 @@ public class Alerts {
         alert.showAndWait();
     }
 
-    // TODO: Move these alert methods to their appropriate usage locations in the application
     public static void alertErrorSlus() {
         formatAlert("Error", "File Not Opened", "SLUS_014.11 file must be opened before editing...", error);
     }
@@ -63,6 +62,7 @@ public class Alerts {
     public static void alertType() {
         formatAlert("Warning", "Caution", "You must select a field card and a type!", warning);
     }
+
 
     public static void alertEmptyField() {
         formatAlert("Warning", "Important!", "Please enter a valid value.", warning);
