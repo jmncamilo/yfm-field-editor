@@ -63,7 +63,7 @@ public class Alerts {
         formatAlert("Warning", "Caution", "You must select a field card and a type!", warning);
     }
 
-
+    // NOTE: This alert is currently unused because input validation always ensures a valid value. Kept for potential future updates
     public static void alertEmptyField() {
         formatAlert("Warning", "Important!", "Please enter a valid value.", warning);
     }
