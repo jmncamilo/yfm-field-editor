@@ -65,6 +65,6 @@ public class Alerts {
 
     // NOTE: This alert is currently unused because input validation always ensures a valid value. Kept for potential future updates
     public static void alertEmptyField() {
-        formatAlert("Warning", "Important!", "Please enter a valid value.", warning);
+        formatAlert("Warning", "Important!", "Please enter a valid value!", warning);
     }
 }
