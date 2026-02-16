@@ -164,7 +164,7 @@ public class InitFrameController implements Initializable {
         // Get the current offset to write
         long currentOffset = cardBase.getCardBaseOffset().get(cbId.getValue());
 
-        // Calling function to write SLUS file and DONE!
+        // Calling function to write SLUS file and DONE
         WritingSlus.write(valueToWrite, currentOffset, slus014);
     }
 
