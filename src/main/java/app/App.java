@@ -15,7 +15,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/InitFrame.fxml"));
-        Parent mainFrame = fxmlLoader.load(); // Load the view that will be the principal frame
+        Parent mainFrame = fxmlLoader.load(); // Loads the main view from the FXML file
         Scene mainScene = new Scene(mainFrame); // Creates scene with the root in this case it would be a Pane
         stage.setTitle("Field Editor byMystic");
         stage.getIcons().addAll( // Icons
